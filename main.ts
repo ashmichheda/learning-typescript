@@ -114,3 +114,21 @@ function subDefault(num1 : number, num2 : number = 5) : number{
 
 console.log("subDefault(10) "+subDefault(10));
 console.log("subDefault(10, 2) "+subDefault(10, 2));
+
+
+// INTERFACES
+// We can create interface of the person object and use that interface as a type for a function parameter
+interface Person {
+    firstName: string,
+    lastName: string
+}
+
+// now we create an object of Person type and pass that to the function
+let p : Person = {
+    firstName : 'Bruce',
+    lastName : 'Chheda'
+}
+function fullName(person : Person){
+    console.log(`${person.firstName} ${person.lastName}`);
+}
+fullName(p);
