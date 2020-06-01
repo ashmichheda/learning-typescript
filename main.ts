@@ -132,3 +132,46 @@ function fullName(person : Person){
     console.log(`${person.firstName} ${person.lastName}`);
 }
 fullName(p);
+
+
+// Classes and Access Modifiers
+class Employee{
+   public employeeName : string;
+
+    constructor(name : string){
+        this.employeeName = name;
+    }
+
+    greet(){
+        console.log(`Good Morning ${this.employeeName}`);
+    }
+}
+
+// Creating an instance of the class Employee
+let emp = new Employee('Ashmi');
+console.log(emp.employeeName);
+emp.greet();
+
+
+class Manager extends Employee{
+    // managerName gets initialized, subclass Manager calls super class constructor Employee for this
+    constructor(managerName : string){
+        super(managerName);
+    }
+    delegateWork(){
+        console.log("Manager delegating tasks");
+    }
+}
+
+let man = new Manager("Bruce");
+man.delegateWork();
+man.greet();
+console.log(man.employeeName);
+
+
+// ACCESS MODIFIERS
+// They are keywords that set the accessibility of properites and methods in a class
+// PUBLIC (default), PRIVATED AND PROTECTED access modifiers
+// Public - Free accessibility
+// Private - Accessibility within the class
+// Protected - Accessibility within a class and classes derived from it.
