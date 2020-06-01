@@ -66,3 +66,9 @@ else{
 
 //(myVariable as string).toUpperCase();
 
+// We can also specify variable with multiple types
+// One should use this, when the type is not under our control
+let multiType : number | boolean;
+multiType = 100;
+multiType = true;
+console.log("multiType value: "+multiType);
