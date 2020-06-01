@@ -72,3 +72,45 @@ let multiType : number | boolean;
 multiType = 100;
 multiType = true;
 console.log("multiType value: "+multiType);
+
+
+// FUNCTIONS
+
+
+// Return type is automatically detected by compiler to be a NUMBER
+// We can also EXPLICITLY Specify number as return type of add()
+function add(num1: number, num2: number) : number{
+    return num1 + num2;
+}
+console.log("Add(2, 5): "+add(2, 5));
+
+// It has the following features for functions: 
+/*
+1. Optional Parameter
+2. Default Parameter
+*/
+//In typescript every parameter is assumed to be called by a function. If you don't pass any parameter (unlike JS) it throws an error.
+
+// To add optional parameter we add '?'
+// Optional parameter will always come after REQUIRED parameters
+function subOptional(num1 : number, num2? : number) : number{
+    if(num2)
+        return num1 - num2;
+    else
+        return num1;
+}
+
+console.log("subOptional(10) "+subOptional(10));
+console.log("subOptional(10, 2) "+subOptional(10, 2));
+
+// DEFAULT PARAMETERS
+// They are just like optional parameters with some default value
+function subDefault(num1 : number, num2 : number = 5) : number{
+    if(num2)
+        return num1 - num2;
+    else
+        return num1;
+}
+
+console.log("subDefault(10) "+subDefault(10));
+console.log("subDefault(10, 2) "+subDefault(10, 2));
