@@ -1,0 +1,5 @@
+{
+    "compilerOptions": {
+        "target": "ES5" // changes the javascript version (js file) that typescript generates
+    }
+}
