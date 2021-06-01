@@ -50,3 +50,8 @@ function Counter(el) {
     })
 }
 new Counter(container);
+
+
+// Destructuring
+var temp = [123, "Ashmi", false];
+var [id, title, completed] = temp; // this is how we desctructure the array `temp`

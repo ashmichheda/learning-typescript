@@ -40,3 +40,6 @@ function Counter(el) {
     });
 }
 new Counter(container);
+// Destructuring
+var temp = [123, "Ashmi", false];
+var id = temp[0], title = temp[1], completed = temp[2]; // this is how we desctructure the array `temp`
